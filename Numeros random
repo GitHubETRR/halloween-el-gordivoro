@@ -1,45 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
-    // función que genera un número al azar entre linf (numero minimo) y lsup (numero maximo)
-    
-    int numero_al_azar(int linf, int lsup) {
-
-
-
-    // Utiliza este tiempo actual como base para inicializar el generador de números aleatorios (rand()).
-    
-    srand(time(NULL)); // La base es importante porque hace que los números generados sean diferentes cada vez que se ejecuta el programa.
-
-
-
-    // Genera un número aleatorio y ajusta al rango deseado
-  
-    int resultado = rand() % (lsup - linf + 1) + linf; 
-    
-    //la fórmula asegura que resultado esté dentro del rango [linf, lsup], incluyendo ambos extremos.
-
-
-
-    // Devuelve el número generado
-    return resultado;
-}
 
 int main() {
+    // Inicializamos una "semilla" para generar números aleatorios
+    unsigned int seed = 0;
 
-    // define los límites del rango cambiándolos en el codigo
-    int minimo = 1;
-    int maximo = 5;
+    asm volatile ("rdtsc" : "=a"(seed));
 
+    // Inicializamos el generador de números aleatorios con la "semilla" obtenida
+    srand(seed);
 
+    // Generamos un número aleatorio entre 1 y 5
+    int numero_aleatorio = (rand() % 5) + 1;
 
-    // Llamamos a la función para obtener un número al azar
-    int numero_generado = numero_al_azar(minimo, maximo);
+    // Mostramos el número aleatorio en la consola
+    printf("Número aleatorio entre 1 y 5: %d\n", numero_aleatorio);
 
-
-
-    // mostramos el resultado
-    printf("Número al azar entre %d y %d: %d\n", minimo, maximo, numero_generado);
     return 0;
 }
