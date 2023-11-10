@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-    // Función que genera un número al azar entre linf (numero minimo) y lsup (numero maximo)
+    // función que genera un número al azar entre linf (numero minimo) y lsup (numero maximo)
     int numero_al_azar(int linf, int lsup) {
+
     // Utiliza este tiempo actual como semilla para inicializar el generador de números aleatorios (rand()).
     srand(time(NULL)); // La semilla es importante para que los números generados 
     //sean diferentes cada vez que ejecutas el programa.
