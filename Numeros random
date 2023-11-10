@@ -10,9 +10,7 @@
 
     // Utiliza este tiempo actual como base para inicializar el generador de números aleatorios (rand()).
     
-    srand(time(NULL)); // La semilla es importante para que los números generados 
-    
-    //sean diferentes cada vez que ejecutas el programa.
+    srand(time(NULL)); // La base es importante porque hace que los números generados sean diferentes cada vez que se ejecuta el programa.
 
 
 
