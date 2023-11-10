@@ -28,22 +28,18 @@
 
 int main() {
 
-    // Define los límites del rango cambiandolos en el codigo
+    // define los límites del rango cambiándolos en el codigo
     int minimo = 1;
     int maximo = 5;
 
 
 
-    // Llama a la función para obtener un número al azar
+    // Llamamos a la función para obtener un número al azar
     int numero_generado = numero_al_azar(minimo, maximo);
 
 
 
-    // Muestra el resultado
+    // mostramos el resultado
     printf("Número al azar entre %d y %d: %d\n", minimo, maximo, numero_generado);
-
-
- 
-    // Indica que el programa se ejecutó correctamente
     return 0;
 }
