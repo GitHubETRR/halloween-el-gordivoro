@@ -30,7 +30,7 @@ int main() {
 
     // Define los límites del rango cambiandolos en el codigo
     int minimo = 1;
-    int maximo = 100;
+    int maximo = 5;
 
 
 
